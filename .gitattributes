@@ -1,0 +1,48 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Force the following filetypes to have unix eols, so Windows does not break them
+*.* text eol=lf
+LICENSE text eol=lf
+
+# Windows forced line-endings
+/.idea/* text eol=crlf
+
+# Remove flamegraph source code from archives
+# /ui/flamegraph/*.md export-ignore
+# /ui/flamegraph/*.html export-ignore
+# /ui/flamegraph/*.cjs export-ignore
+# /ui/flamegraph/*.js export-ignore
+# /ui/flamegraph/*.json export-ignore
+# /ui/flamegraph/src/ export-ignore
+# /ui/flamegraph/public/ export-ignore
+
+#
+## These files are binary and should be left untouched
+#
+
+# (binary is a macro for -text -diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+*.pyc binary
+*.pdf binary
+*.ez binary
+*.bz2 binary
+*.swp binary
