@@ -21,7 +21,7 @@ import (
     "fmt"
 
     "github.com/mxmauro/go-systray"
-    "github.com/energye/go-systray/assets"
+    "github.com/mxmauro/go-systray/assets"
 )
 
 func main() {
@@ -32,10 +32,10 @@ func onReady() {
     systray.SetIcon(assets.Wifi3Image)
     systray.SetTitle("Awesome App")
     systray.SetTooltip("Pretty awesome超级棒")
-    systray.SetOnClick(func () {
+    systray.SetOnClick(func (menu systray.IMenu) {
         fmt.Println("SetOnClick")
     })
-    systray.SetOnDClick(func () {
+    systray.SetOnDClick(func (menu systray.IMenu) {
         fmt.Println("SetOnDClick")
     })
     systray.SetOnRClick(func (menu systray.IMenu) {
